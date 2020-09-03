@@ -1,0 +1,17 @@
+#galeria {
+	background-color: $gray;
+	.column-gallery {
+		display: none;
+		.content {
+ 			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  			background-color: $white;
+  			padding: 10px;
+  			img {
+				width: 100%;
+			}
+		}
+	}
+	.show {
+  		display: block !important;
+	}
+}

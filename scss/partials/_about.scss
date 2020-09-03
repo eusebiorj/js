@@ -1,0 +1,23 @@
+.grid-container {
+	@include grid;
+	grid-column-gap: 20px;
+	grid-row-gap: 30px;
+	justify-content: space-between;
+	.card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+		img {
+			width: 100%;
+		}
+		.card-content {
+			padding: 5px 15px 20px 15px;
+			.card-title {
+				margin: 10px 0px;
+			}
+			.departamento, .email {
+				color: $secondary-color;
+				margin: 10px 0px;
+			}
+		}		
+	}
+} 
+// Este grid se usa para ABOUT y GALLERY 

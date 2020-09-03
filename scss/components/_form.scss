@@ -1,0 +1,25 @@
+
+.contacto-formulario .grid-container {
+	grid-template-columns: 60% 40%;
+	img {
+		width: 100%;
+	}
+	input[type=text], select {
+		width: 100%;
+		padding: 12px;
+		margin-top: 6px;
+		margin-bottom: 16px;
+		border: 1px solid $gray;
+	}
+	textarea {
+		@extend select;
+		resize: vertical;
+	}
+	input[type=submit] {
+  		@include button;
+  		padding: 12px 20px;
+  		&:hover {
+  			background-color: $secondary-color;	
+  		}
+	}
+}

@@ -1,0 +1,23 @@
+
+@import
+  'vendors/normalize';
+
+@import
+  'abstracts/variables',
+  'abstracts/mixins';
+
+@import
+  'base/basic';
+
+@import
+  'layout/header',
+  'layout/footer';
+
+@import
+  'partials/slider',
+  'partials/about',
+  'partials/gallery';
+  
+  @import
+  'components/button',
+  'components/form';

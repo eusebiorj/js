@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicios JS</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+	<header>
+		<div class="header-top">
+  			<h1>Header</h1>
+  			<h2>My supercool header</h2>
+		</div> 
+		<div class="header-bottom" id="sticky">
+			<div class="container">
+				<nav class="navbar">
+					<ul class="navbar-main">
+						<li class="nav-item active">
+       						<a href="#"><i class="fa fa-home" aria-hidden="true"></i></a>
+      					</li>
+      					<li class="nav-item">
+       						<a href="#">Quiénes somos</a>
+      					</li>
+						<li class="nav-item">
+							<a href="#">Servicios</a>
+							<ul class="navbar-sub">
+								<li class="nav-item"><a href="#">Servicio 1</a></li>
+								<li class="nav-item"><a href="#">Servicio 2</a></li>
+								<li class="nav-item"><a href="#">Servicio 3</a></li>
+								<li class="nav-item"><a href="#">Servicio 4</a></li>
+							</ul><!-- .navbar-sub -->
+						</li>
+						<li class="nav-item">
+							<a href="#">Portfolio</a>
+						</li>
+						<li class="nav-item">
+							<a href="#">Blog</a>
+						</li>      					
+      					<li class="nav-item">
+       						<a href="#">Galería</a>
+      					</li>
+      					<li class="nav-item">
+       						<a href="#">Contacto</a>
+      					</li>
+      					<li class="nav-item">
+       						<a href="javascript:void(0);" class="icon" onclick="responsive()"><i class="fa fa-bars"></i></a>
+      					</li>
+					</ul><!--  navbar-main -->
+				</nav>
+			</div><!-- container -->
+		</div><!-- .header-bottom -->
+	</header>
+	<main>
+		<section id=slider-js>
+			<!-- Se repite por cada imagen -->
+			<div class="slide fade">
+				<img src="img/imagen-slide2.jpg">
+				<!-- <div class="texto">Texto de la imagen</div> -->
+			</div>
+			<div class="slide fade">
+				<img src="img/imagen-slide3.jpg">
+				<!-- <div class="texto">La foto 2</div> -->
+			</div>
+			<div class="slide fade">
+				<img src="img/imagen-slide1.jpg">
+				<!-- <div class="texto">La foto 3</div> -->
+			</div>
+			<!-- Flechas -->
+			<a class="atras" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="siguiente" onclick="plusSlides(1)">&#10095;</a>
+			<!-- Puntos --> 
+			<div class="center">
+				<span class="punto active" onclick="currentSlide(1)"></span>
+				<span class="punto" onclick="currentSlide(2)"></span>
+				<span class="punto" onclick="currentSlide(3)"></span>
+			</div>
+		</section>
+		
+		<section id="quienes-somos">
+			<div class="container">
+				<div class="quienes-encabezado">
+					<h2 class="title-section">Quiénes somos</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor non quae fuga, sunt accusamus, quo fugiat reiciendis nobis exercitationem animi commodi ducimus, odit fugit maiores nulla explicabo voluptatibus blanditiis delectus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor non quae fuga, sunt accusamus, quo fugiat reiciendis nobis exercitationem animi commodi ducimus, odit fugit maiores nulla explicabo voluptatibus blanditiis delectus.</p>
+				</div>
+				<div class="row grid-container">
+					<div class="column grid-item">
+						<div class="card">
+							<img src="img/team1.jpg" alt="Jane Doe">
+							<div class="card-content">
+								<h3 class="card-title">Jane Doe</h3>
+								<p class="departamento">CEO & Founder</p>
+								<p>Lorem ipsum dolor sit ipsum elit amet, consectetur adipisicing elit. </p>
+								<p class="email">jdoe@dominio.com</p>
+								<button class="btn-about">Contactar</button>
+							</div>
+						</div>
+					</div>				
+					<div class="column grid-item">
+						<div class="card">
+							<img src="img/team2.jpg" alt="Nombre">
+							<div class="card-content">
+								<h3 class="card-title">Mike Ross</h3>
+								<p class="departamento">Art Director</p>
+								<p>Lorem ipsum dolor sit ipsum elit amet, consectetur adipisicing elit. </p>
+								<p class="email">mross@dominio.com</p>
+								<button class="btn-about">Contactar</button>
+							</div>
+						</div>
+					</div>
+					<div class="column grid-item">
+						<div class="card">
+							<img src="img/team3.jpg" alt="Nombre">
+							<div class="card-content">
+								<h3 class="card-title">John Doe</h3>
+								<p class="departamento">Designer</p>
+								<p>Lorem ipsum dolor sit ipsum elit amet, consectetur adipisicing elit. </p>
+								<p class="email">johnd@dominio.com</p>
+								<button class="btn-about">Contactar</button>		
+							</div>
+						</div>
+					</div>				
+				</div> <!-- fin row -->
+			</div>	<!-- fin container -->			
+		</section>
+
+		<section id="galeria">
+			<div class="container">
+				<div class="galeria-encabezado">
+					<h2 class="title-section">Galería con filtros</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum vero ab repudiandae veniam officia, aliquid similique aspernatur, id repellendus laudantium architecto eligendi ipsum, consequuntur cupiditate. Minima vero suscipit, molestiae distinctio.</p>
+					<div id="galeria-filtros">
+		 			 <button class="btn-gallery active" onclick="mostrarTodo()"> Show all</button>
+	  			 <button class="btn-gallery" onclick="mostrarCategoria('nature')"> Nature</button>
+	  			 <button class="btn-gallery" onclick="mostrarCategoria('cars')"> Cars</button>
+	  			 <button class="btn-gallery" onclick="mostrarCategoria('people')"> People</button>
+					</div>
+				</div> <!-- . galeria-encabezado -->
+				<div class="row grid-container">
+					<div class="column-gallery nature grid-item">
+						<div class="content">
+							<img src="img/gallery/mountains.jpg" alt="titulo">
+							<h4>Nombre</h4>
+							<p>Descripción de la imagen</p>
+						</div>
+					</div>				
+					<div class="column-gallery nature grid-item">
+						<div class="content">
+							<img src="img/gallery/lights.jpg" alt="titulo">
+							<h4>Nombre</h4>
+							<p>Descripción de la imagen</p>
+						</div>
+					</div>
+					<div class="column-gallery nature grid-item">
+						<div class="content">
+							<img src="img/gallery/nature.jpg" alt="titulo">
+							<h4>Nombre</h4>
+							<p>Descripción de la imagen</p>
+						</div>
+					</div>
+					<div class="column-gallery cars grid-item">
+						<div class="content">
+							<img src="img/gallery/cars1.jpg" alt="titulo">
+							<h4>Nombre</h4>
+							<p>Descripción de la imagen</p>
+						</div>
+					</div>
+					<div class="column-gallery cars grid-item">
+						<div class="content">
+							<img src="img/gallery/cars2.jpg" alt="titulo">
+							<h4>Nombre</h4>
+							<p>Descripción de la imagen</p>
+						</div>
+					</div>
+					<div class="column-gallery cars grid-item">
+						<div class="content">
+							<img src="img/gallery/cars3.jpg" alt="titulo">
+							<h4>Nombre</h4>
+							<p>Descripción de la imagen</p>
+						</div>
+					</div>
+					<div class="column-gallery people grid-item">
+						<div class="content">
+							<img src="img/gallery/people1.jpg" alt="titulo">
+							<h4>Nombre</h4>
+							<p>Descripción de la imagen</p>
+						</div>
+					</div>
+					<div class="column-gallery people grid-item">
+						<div class="content">
+							<img src="img/gallery/people2.jpg" alt="titulo">
+							<h4>Nombre</h4>
+							<p>Descripción de la imagen</p>
+						</div>
+					</div>				
+					<div class="column-gallery people grid-item">
+						<div class="content">
+							<img src="img/gallery/people3.jpg" alt="titulo">
+							<h4>Nombre</h4>
+							<p>Descripción de la imagen</p>
+						</div>
+					</div>			
+				</div><!-- . row -->
+
+			</div> <!-- . container -->
+		</section>
+		<section id="contacto">
+			<div class="container">
+				<div class="contacto-encabezado">
+					<h2 class="title-section">Formulario de contacto</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum vero ab repudiandae veniam officia, aliquid similique aspernatur, id repellendus laudantium architecto eligendi ipsum, consequuntur cupiditate. Minima vero suscipit, molestiae distinctio.</p>
+				</div>
+				<div class="contacto-formulario">
+					<div class="row grid-container">
+						<div class="grid-item">
+							<img src="img/map.jpg" alt="mapa">
+						</div>
+						<div class="grid-item">
+							<form>
+								<label for="nombre">Nombre</label>
+								<input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre">
+								<label for="nombre">Apellidos</label>
+								<input type="text" name="apellido" id="apellido" placeholder="Escribe tus apellidos">
+								<label for="provincia">Provincia</label>
+						        <select id="provincia" name="provincia">
+						          <option value="toledo">Toledo</option>
+						          <option value="albacete">Albacete</option>
+						          <option value="cuenca">Cuenca</option>
+						        </select>
+	       	 					<label for="asunto">Asunto</label>
+	        					<textarea id="subject" name="subject" placeholder="Deja tu mensaje..."></textarea>
+	        					<input type="submit" name="submit">
+							</form>
+						</div>
+					</div>
+				</div>
+			</div> <!-- .container -->
+		</section>
+	</main>
+	<footer>
+		<div class="row grid-container">
+		
+				<div class="column-footer grid-item">
+					<h4>Más información de la compañía</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sit, voluptatibus cumque velit nemo a quis at doloremque consequuntur quam iure fuga harum non voluptates repudiandae accusantium in rerum quia quam iure fuga. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae dolorem itaque iure in rerum quia quam iure fuga. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae dolorem itaque iure.</p>
+				</div>
+				<div class="grid">
+					<div class="column-footer grid-item">
+						<h4>Enlaces de interés</h4>
+						<ul>
+							<li><a href="#">Link muy interesante 1</a></li>
+							<li><a href="#">Link muy interesante 2</a></li>
+							<li><a href="#">Link muy interesante 3</a></li>
+							<li><a href="#">Link muy interesante 4</a></li>
+							<li><a href="#">Link muy interesante 5</a></li>
+						</ul>
+					</div>
+					<div class="column-footer grid-item">
+						<h4>Información de contacto</h4>
+						<p><span>Dirección: </span>Av. Nombre de la avenida nº 143. CP 28345. Madrid. <br/><em>Junto a un monumento indeterminado</em></p>
+						<p><span>Teléfono: </span>900 45 55 65</p>
+						<p><span>Email: </span>email@midominio.com</p>
+					</div>
+				</div>
+		</div> <!-- .grid-container -->
+
+			<div class="copy">
+				<div class="copyright">
+					&copy; 2020 - Todos los derechos reservados.
+				</div>
+				<div class="social-media">
+					<ul class="nav-social">
+						<li class="nav-item">
+	       					<a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+	      				</li>
+	      				<li class="nav-item">
+	       					<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+	      				</li>
+	      				<li class="nav-item">
+	       					<a href="#"><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
+	      				</li>
+      				</ul>
+				</div>
+			</div>
+			HICE CAMBIOS GIT
+	</footer>
+	<script src="js/script-menu.js"></script>
+	<script src="js/script-slider.js"></script>
+	<script src="js/script-galeria.js"></script> 
+	<script src="js/script-footer.js"></script> 
+</body>
+</html>

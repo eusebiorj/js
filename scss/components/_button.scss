@@ -1,0 +1,19 @@
+.btn-about {
+	@include button;
+	padding: 10px 0px;
+	width: 100%;
+	&:hover{
+	 	background-color: $secondary-color;
+	}
+}
+.btn-gallery {
+	@include button;
+	display: inline-block;
+	padding: 12px 16px;
+	&:hover {
+		  background-color: $secondary-color;	
+	}
+}
+.btn-gallery.active {
+	background-color: $secondary-color;	
+	}

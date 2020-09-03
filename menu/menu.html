@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>menu desplegable</title>
+	<style type="text/css">
+		* {
+			padding: 0;
+			margin: 0;	}
+		ul {
+			list-style: none;
+		}
+		ul.navigation > li {
+			float: left;
+		}
+		ul li a {
+			display: block;
+			text-decoration: none;
+			background-color: blue;
+			color: white;
+			padding: 10px 15px;
+		}
+		ul li a:hover {
+			background-color: green;
+		}
+		ul li ul {
+			display: none;
+			position: absolute;
+			min-width: 150px;
+		}
+		ul li:hover ul {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+
+		<nav class="nav-bar">
+			<ul class="navigation" id="menu-navegacion">
+				<li class="nav-item active">
+       			<a href="#">Home</a>
+      		</li>
+      		<li class="nav-item">
+       			<a href="#">Quiénes somos</a>
+      		</li>
+				<li class="nav-item">
+					<a href="#">Servicios</a>
+						<ul class="submenu">
+							<li><a href="#">Submenu 1</a></li>
+							<li><a href="#">Submenu 2</a></li>
+							<li><a href="#">Submenu 3</a></li>
+							<li><a href="#">Submenu 4</a></li>
+						</ul>
+				</li>
+				<li class="nav-item">
+					<a href="#">Portfolio</a>
+				</li>	
+			</ul>
+		</nav>
+</body>
+</html>
+	

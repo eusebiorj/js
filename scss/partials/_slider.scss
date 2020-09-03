@@ -1,0 +1,61 @@
+#slider-js {
+	position: relative;
+	.slide {
+		display: none;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.atras, .siguiente {
+		cursor: pointer;
+		color: $white;
+		font-size: 40px;
+		font-weight: bold;
+		padding: 10px 15px;
+		position: absolute;
+		top: 40%;
+		&:hover {
+			background-color: rgba(0,0,0,0.8);
+		}
+	}
+	.siguiente {
+		right: 0;
+	}
+	.center {
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		.punto {
+			display: inline-block;
+			cursor: pointer;
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			background-color: $gray;
+			margin: 10px 5px;
+			&:hover {
+				 background-color: $primary-color;
+			}
+			.active {
+				background-color: $primary-color;
+			}
+		}
+	}
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}

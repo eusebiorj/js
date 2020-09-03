@@ -1,0 +1,40 @@
+.header-top {
+  padding: 80px;
+  text-align: center;
+  background-color: $gray;
+  color: $primary-color;
+}
+.header-bottom {
+	background-color: $primary-color; 
+}
+ul.navbar-main {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	a {
+		display: block;
+		padding: 14px 16px;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: $fnormal;
+		color: $gray;
+		&:hover {
+			background-color: $gray;
+  			color: $primary-color;
+		}
+	}
+	li.active a {
+		background-color: $secondary-color;
+   			color: $white;
+	}
+	li.nav-item:hover ul.navbar-sub {
+		display: block;
+		min-width: 150px;
+	}
+	li.nav-item a.icon {
+	display: none;
+	}
+}
+ul.navbar-sub {
+	display: none;
+}

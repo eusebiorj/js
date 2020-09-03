@@ -1,0 +1,12 @@
+@mixin button {
+	background-color: $primary-color;
+	color: $white;
+	cursor: pointer;
+	border: 1px solid transparent;
+	border-radius: 5px;
+}
+
+@mixin grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}

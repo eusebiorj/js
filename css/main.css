@@ -1,0 +1,266 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: #333; }
+  body .container {
+    max-width: 90%;
+    margin: auto; }
+  body section {
+    padding-top: 50px;
+    padding-bottom: 50px; }
+  body #slider-js {
+    padding: 0; }
+  body .title-section {
+    text-align: center;
+    margin-bottom: 20px; }
+  body p {
+    line-height: 1.5em;
+    text-align: justify;
+    margin-bottom: 20px; }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100; }
+
+nav li {
+  position: relative; }
+
+nav li ul {
+  position: absolute;
+  z-index: 99; }
+
+ul {
+  list-style: none;
+  padding: 0;
+  background-color: #333; }
+
+.galeria-encabezado,
+.contacto-encabezado,
+.quienes-encabezado {
+  margin-bottom: 50px; }
+
+.quienes-encabezado {
+  position: relative; }
+
+.header-top {
+  padding: 80px;
+  text-align: center;
+  background-color: #f2f2f2;
+  color: #333; }
+
+.header-bottom {
+  background-color: #333; }
+
+ul.navbar-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  ul.navbar-main a {
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #f2f2f2; }
+    ul.navbar-main a:hover {
+      background-color: #f2f2f2;
+      color: #333; }
+  ul.navbar-main li.active a {
+    background-color: #45a049;
+    color: #fff; }
+  ul.navbar-main li.nav-item:hover ul.navbar-sub {
+    display: block;
+    min-width: 150px; }
+  ul.navbar-main li.nav-item a.icon {
+    display: none; }
+
+ul.navbar-sub {
+  display: none; }
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding-top: 25px;
+  font-size: 15px; }
+  footer h4 {
+    font-size: 16px;
+    margin-bottom: 10px; }
+  footer li {
+    list-style: none; }
+  footer a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    line-height: 25px; }
+  footer span {
+    font-weight: bold; }
+  footer p {
+    margin-bottom: 7px; }
+  footer .grid-container {
+    grid-template-columns: 50% auto auto;
+    max-width: 90%;
+    margin: auto; }
+  footer .column-footer {
+    padding: 5px 15px; }
+  footer .grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between; }
+  footer div.copy {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 15px;
+    margin-top: 50px;
+    background-color: #45a049; }
+    footer div.copy .copyright {
+      align-items: center;
+      display: flex; }
+
+.nav-social .nav-item {
+  display: block;
+  padding-left: 15px;
+  font-size: 28px;
+  float: right;
+  color: #fff; }
+
+#slider-js {
+  position: relative; }
+  #slider-js .slide {
+    display: none; }
+    #slider-js .slide img {
+      width: 100%;
+      height: auto; }
+  #slider-js .atras, #slider-js .siguiente {
+    cursor: pointer;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 10px 15px;
+    position: absolute;
+    top: 40%; }
+    #slider-js .atras:hover, #slider-js .siguiente:hover {
+      background-color: rgba(0, 0, 0, 0.8); }
+  #slider-js .siguiente {
+    right: 0; }
+  #slider-js .center {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%); }
+    #slider-js .center .punto {
+      display: inline-block;
+      cursor: pointer;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: #f2f2f2;
+      margin: 10px 5px; }
+      #slider-js .center .punto:hover {
+        background-color: #333; }
+      #slider-js .center .punto .active {
+        background-color: #333; }
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s; }
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+@keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 30px;
+  justify-content: space-between; }
+  .grid-container .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
+    .grid-container .card img {
+      width: 100%; }
+    .grid-container .card .card-content {
+      padding: 5px 15px 20px 15px; }
+      .grid-container .card .card-content .card-title {
+        margin: 10px 0px; }
+      .grid-container .card .card-content .departamento, .grid-container .card .card-content .email {
+        color: #45a049;
+        margin: 10px 0px; }
+
+#galeria {
+  background-color: #f2f2f2; }
+  #galeria .column-gallery {
+    display: none; }
+    #galeria .column-gallery .content {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      background-color: #fff;
+      padding: 10px; }
+      #galeria .column-gallery .content img {
+        width: 100%; }
+  #galeria .show {
+    display: block !important; }
+
+.btn-about {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 10px 0px;
+  width: 100%; }
+  .btn-about:hover {
+    background-color: #45a049; }
+
+.btn-gallery {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 12px 16px; }
+  .btn-gallery:hover {
+    background-color: #45a049; }
+
+.btn-gallery.active {
+  background-color: #45a049; }
+
+.contacto-formulario .grid-container {
+  grid-template-columns: 60% 40%; }
+  .contacto-formulario .grid-container img {
+    width: 100%; }
+  .contacto-formulario .grid-container input[type=text], .contacto-formulario .grid-container select, .contacto-formulario .grid-container textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    border: 1px solid #f2f2f2; }
+  .contacto-formulario .grid-container textarea {
+    resize: vertical; }
+  .contacto-formulario .grid-container input[type=submit] {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 12px 20px; }
+    .contacto-formulario .grid-container input[type=submit]:hover {
+      background-color: #45a049; }
+
+/*# sourceMappingURL=main.css.map */
